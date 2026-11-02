@@ -115,7 +115,6 @@
         </button>
         <div id="qris-dropdown" class="accordion-content">
           <div class="qris-card">
-            <!-- Container Gambar Otomatis Menyesuaikan Rasio Asli -->
             <div class="qris-img-wrapper">
               <picture>
                 <source srcset="qris.webp" type="image/webp">
@@ -124,7 +123,6 @@
             </div>
             <p class="qris-caption">Scan QRIS untuk pembayaran / donasi</p>
             
-            <!-- Tombol Lihat Jelas (Modal Popup Dalam Halaman) -->
             <button class="view-qris-btn btn-qris" onclick="openModal()">
               <svg class="view-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -139,11 +137,11 @@
     </div>
   </div>
 
-  <!-- Modal Popup QRIS (Tanpa Buka Web Lain) -->
+  <!-- Modal Popup QRIS -->
   <div id="qris-modal" class="modal" onclick="closeModal()">
     <div class="modal-wrapper" onclick="event.stopPropagation()">
       <span class="close-modal" onclick="closeModal()">&times;</span>
-      <img id="modal-img" src="qris.png" alt="QRIS Full View" class="modal-img">
+      <img id="modal-img" src="qris.png" alt="QRIS Full View" class="modal-img" onerror="this.onerror=null; this.src='qris.webp';">
     </div>
   </div>
 
