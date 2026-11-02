@@ -1,3 +1,4 @@
+/* style.css */
 :root {
   --bg-color: #ebf0f7;
   --text-primary: #2d3748;
@@ -126,12 +127,16 @@ body {
   gap: 12px;
 }
 
-/* SVG Icon Custom Styles */
+/* SVG Icon Styles */
 .icon {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
   color: var(--text-primary);
+}
+
+.wa-icon {
+  color: var(--whatsapp-color);
 }
 
 .arrow-icon {
