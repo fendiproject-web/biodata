@@ -1,10 +1,10 @@
 /* style.css */
 :root {
-  --bg-color: #f4f7fb;
+  --bg-color: #ebf0f7;
   --text-primary: #2d3748;
   --text-secondary: #718096;
-  --shadow-flat: 6px 6px 14px rgba(180, 190, 205, 0.6), -6px -6px 14px #ffffff;
-  --shadow-inset: inset 3px 3px 6px rgba(180, 190, 205, 0.6), inset -3px -3px 6px #ffffff;
+  --shadow-flat: 6px 6px 14px rgba(180, 190, 205, 0.7), -6px -6px 14px #ffffff;
+  --shadow-inset: inset 3px 3px 6px rgba(180, 190, 205, 0.7), inset -3px -3px 6px #ffffff;
   --shadow-avatar: 8px 8px 18px rgba(180, 190, 205, 0.7), -8px -8px 18px #ffffff;
   
   /* Brand Colors */
@@ -30,11 +30,10 @@ html {
 
 body {
   background-color: var(--bg-color);
-  /* Latar belakang bergambar abstrak geometris */
-  background-image: url('bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  /* Pola Garis Diagonal Halus Murni CSS (Anti Polos) */
+  background-image: 
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.35) 0px, rgba(255, 255, 255, 0.35) 2px, transparent 2px, transparent 14px),
+    linear-gradient(135deg, #f4f8fc 0%, #dce4f0 100%);
   background-attachment: fixed;
   color: var(--text-primary);
   display: flex;
@@ -43,6 +42,42 @@ body {
   min-height: 100dvh;
   padding: 28px 16px;
   overflow-y: auto;
+  position: relative;
+}
+
+/* BENTUK GEOMETRIS 3D LATAR BELAKANG */
+.bg-shape {
+  position: fixed;
+  border-radius: 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(220, 230, 245, 0.3));
+  box-shadow: 15px 15px 35px rgba(163, 177, 198, 0.4), -15px -15px 35px rgba(255, 255, 255, 0.9);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.shape-1 {
+  width: 320px;
+  height: 320px;
+  top: -80px;
+  left: -80px;
+  transform: rotate(42deg);
+}
+
+.shape-2 {
+  width: 380px;
+  height: 380px;
+  bottom: -120px;
+  right: -90px;
+  transform: rotate(35deg);
+}
+
+.shape-3 {
+  width: 180px;
+  height: 180px;
+  top: 40%;
+  left: -100px;
+  transform: rotate(25deg);
+  opacity: 0.6;
 }
 
 .container {
@@ -51,6 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  z-index: 1;
 }
 
 /* Profile Section */
@@ -67,8 +103,8 @@ body {
   height: 100px;
   border-radius: 50%;
   padding: 4px;
-  background: rgba(244, 247, 251, 0.85);
-  backdrop-filter: blur(6px);
+  background: rgba(235, 240, 247, 0.85);
+  backdrop-filter: blur(8px);
   box-shadow: var(--shadow-avatar);
   margin-bottom: 12px;
   display: flex;
@@ -110,7 +146,7 @@ body {
   width: 100%;
   padding: 16px 22px;
   border-radius: 20px;
-  background: rgba(244, 247, 251, 0.88);
+  background: rgba(235, 240, 247, 0.88);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow-flat);
   font-size: 1.02rem;
@@ -213,7 +249,7 @@ body {
 .sub-btn {
   padding: 14px 18px;
   border-radius: 18px;
-  background: rgba(244, 247, 251, 0.88);
+  background: rgba(235, 240, 247, 0.88);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow-inset);
   text-decoration: none;
@@ -233,7 +269,7 @@ body {
 
 /* QRIS Card & Otomatis Mengikuti Ukuran Foto Asli */
 .qris-card {
-  background: rgba(244, 247, 251, 0.88);
+  background: rgba(235, 240, 247, 0.88);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow-inset);
   border-radius: 20px;
@@ -272,7 +308,7 @@ body {
   width: 100%;
   padding: 12px 16px;
   border-radius: 16px;
-  background: rgba(244, 247, 251, 0.88);
+  background: rgba(235, 240, 247, 0.88);
   box-shadow: var(--shadow-flat);
   font-size: 0.88rem;
   font-weight: 600;
