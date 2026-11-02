@@ -50,19 +50,19 @@ function initTypewriter() {
         el.textContent = fullText.substring(0, index);
         if (index === 0) {
           isDeleting = false;
-          setTimeout(loop, 400); // Jeda sebelum mengetik lagi
+          setTimeout(loop, 400);
           return;
         }
-        setTimeout(loop, 60); // Kecepatan menghapus
+        setTimeout(loop, 60);
       } else {
         index++;
         el.textContent = fullText.substring(0, index);
         if (index === fullText.length) {
           isDeleting = true;
-          setTimeout(loop, 2000); // Jeda saat teks selesai diketik (2 detik)
+          setTimeout(loop, 2000);
           return;
         }
-        setTimeout(loop, 120); // Kecepatan mengetik
+        setTimeout(loop, 120);
       }
     }
     
