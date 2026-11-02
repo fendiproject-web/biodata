@@ -1,0 +1,98 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fendi Store - Link Bio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header / Profil -->
+    <div class="profile-card">
+      <div class="avatar-box">
+        <i class="fa-solid fa-store avatar-icon"></i>
+      </div>
+      <h1 class="profile-title">FENDI STORE</h1>
+      <p class="profile-subtitle">Official Contact & Social Media</p>
+    </div>
+
+    <!-- Link Links -->
+    <div class="links-container">
+      
+      <!-- Instagram -->
+      <a href="https://instagram.com/fendi.store_" target="_blank" rel="noopener noreferrer" class="neu-btn">
+        <div class="btn-content">
+          <i class="fa-brands fa-instagram icon"></i>
+          <span>Instagram</span>
+        </div>
+        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://tiktok.com/@fenditiktok__" target="_blank" rel="noopener noreferrer" class="neu-btn">
+        <div class="btn-content">
+          <i class="fa-brands fa-tiktok icon"></i>
+          <span>TikTok</span>
+        </div>
+        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+      </a>
+
+      <!-- Telegram -->
+      <a href="https://t.me/testifendistore" target="_blank" rel="noopener noreferrer" class="neu-btn">
+        <div class="btn-content">
+          <i class="fa-brands fa-telegram icon"></i>
+          <span>Telegram</span>
+        </div>
+        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+      </a>
+
+      <!-- Dropdown WhatsApp -->
+      <div class="accordion">
+        <button class="neu-btn accordion-btn" onclick="toggleAccordion('wa-dropdown')">
+          <div class="btn-content">
+            <i class="fa-brands fa-whatsapp icon"></i>
+            <span>WhatsApp Official</span>
+          </div>
+          <i class="fa-solid fa-chevron-down arrow-icon toggle-arrow"></i>
+        </button>
+        <div id="wa-dropdown" class="accordion-content">
+          <a href="https://wa.me/6285854325988" target="_blank" rel="noopener noreferrer" class="sub-btn">
+            <i class="fa-solid fa-headset sub-icon"></i>
+            <span>WhatsApp Japost (0858-5432-5988)</span>
+          </a>
+          <a href="https://wa.me/6281553801021" target="_blank" rel="noopener noreferrer" class="sub-btn">
+            <i class="fa-solid fa-shield-halved sub-icon"></i>
+            <span>WhatsApp Rekber (0815-5380-1021)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown Donasi QRIS -->
+      <div class="accordion">
+        <button class="neu-btn accordion-btn" onclick="toggleAccordion('qris-dropdown')">
+          <div class="btn-content">
+            <i class="fa-solid fa-qrcode icon"></i>
+            <span>Donasi / QRIS</span>
+          </div>
+          <i class="fa-solid fa-chevron-down arrow-icon toggle-arrow"></i>
+        </button>
+        <div id="qris-dropdown" class="accordion-content">
+          <div class="qris-box">
+            <picture>
+              <source srcset="qris.webp" type="image/webp">
+              <img src="qris.png" alt="QRIS Donasi" class="qris-img" onerror="this.onerror=null; this.src='qris.png';">
+            </picture>
+            <p class="qris-caption">Scan QRIS untuk pembayaran / donasi</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
