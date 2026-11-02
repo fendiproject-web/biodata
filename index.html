@@ -10,16 +10,20 @@
 </head>
 <body>
   <div class="container">
-    <!-- Header / Profil -->
-    <div class="profile-card">
-      <div class="avatar-box">
-        <i class="fa-solid fa-store avatar-icon"></i>
+    
+    <!-- Profil Bulat (Tanpa Kotak Container) -->
+    <div class="profile-section">
+      <div class="avatar-wrapper">
+        <picture>
+          <source srcset="profile.webp" type="image/webp">
+          <img src="profile.png" alt="Fendi Store Profile" class="avatar-img" onerror="this.onerror=null; this.src='profile.png';">
+        </picture>
       </div>
       <h1 class="profile-title">FENDI STORE</h1>
       <p class="profile-subtitle">Official Contact & Social Media</p>
     </div>
 
-    <!-- Link Links -->
+    <!-- Container Link -->
     <div class="links-container">
       
       <!-- Instagram -->
@@ -70,7 +74,7 @@
         </div>
       </div>
 
-      <!-- Dropdown Donasi QRIS -->
+      <!-- Dropdown QRIS Donasi -->
       <div class="accordion">
         <button class="neu-btn accordion-btn" onclick="toggleAccordion('qris-dropdown')">
           <div class="btn-content">
@@ -80,7 +84,7 @@
           <i class="fa-solid fa-chevron-down arrow-icon toggle-arrow"></i>
         </button>
         <div id="qris-dropdown" class="accordion-content">
-          <div class="qris-box">
+          <div class="qris-card">
             <picture>
               <source srcset="qris.webp" type="image/webp">
               <img src="qris.png" alt="QRIS Donasi" class="qris-img" onerror="this.onerror=null; this.src='qris.png';">
