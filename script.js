@@ -1,3 +1,4 @@
+// script.js
 function toggleAccordion(id) {
   const content = document.getElementById(id);
   const parent = content.parentElement;
