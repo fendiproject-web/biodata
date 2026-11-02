@@ -12,11 +12,13 @@ function toggleAccordion(id) {
   parent.classList.toggle('active');
 }
 
-// Modal View QRIS Jelas Dalam Halaman
 function openModal() {
   const modal = document.getElementById('qris-modal');
-  const qrisSrc = document.getElementById('qris-image-src').src;
-  document.getElementById('modal-img').src = qrisSrc;
+  const qrisImg = document.getElementById('qris-image-src');
+  
+  const activeSrc = qrisImg.currentSrc || qrisImg.src;
+  
+  document.getElementById('modal-img').src = activeSrc;
   modal.classList.add('show');
 }
 
