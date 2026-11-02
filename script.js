@@ -1,4 +1,9 @@
 // script.js
+document.addEventListener('DOMContentLoaded', () => {
+  initTypewriter();
+});
+
+// Accordion Toggle
 function toggleAccordion(id) {
   const content = document.getElementById(id);
   const parent = content.parentElement;
@@ -12,6 +17,7 @@ function toggleAccordion(id) {
   parent.classList.toggle('active');
 }
 
+// Modal View QRIS Jelas
 function openModal() {
   const modal = document.getElementById('qris-modal');
   const qrisImg = document.getElementById('qris-image-src');
@@ -25,4 +31,41 @@ function openModal() {
 function closeModal() {
   const modal = document.getElementById('qris-modal');
   modal.classList.remove('show');
+}
+
+// Fungsi Animasi Ketikan Berulang (Looping Typewriter)
+function initTypewriter() {
+  const typeElements = document.querySelectorAll('.btn-text');
+  
+  typeElements.forEach(el => {
+    const fullText = el.getAttribute('data-text') || el.textContent.trim();
+    el.setAttribute('data-text', fullText);
+    
+    let index = 0;
+    let isDeleting = false;
+    
+    function loop() {
+      if (isDeleting) {
+        index--;
+        el.textContent = fullText.substring(0, index);
+        if (index === 0) {
+          isDeleting = false;
+          setTimeout(loop, 400); // Jeda sebelum mengetik lagi
+          return;
+        }
+        setTimeout(loop, 60); // Kecepatan menghapus
+      } else {
+        index++;
+        el.textContent = fullText.substring(0, index);
+        if (index === fullText.length) {
+          isDeleting = true;
+          setTimeout(loop, 2000); // Jeda saat teks selesai diketik (2 detik)
+          return;
+        }
+        setTimeout(loop, 120); // Kecepatan mengetik
+      }
+    }
+    
+    loop();
+  });
 }
