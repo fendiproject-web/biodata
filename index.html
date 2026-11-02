@@ -94,11 +94,20 @@
         </button>
         <div id="qris-dropdown" class="accordion-content">
           <div class="qris-card">
-            <picture>
+            <picture class="qris-picture">
               <source srcset="qris.webp" type="image/webp">
               <img src="qris.png" alt="QRIS Donasi" class="qris-img" onerror="this.onerror=null; this.src='qris.png';">
             </picture>
             <p class="qris-caption">Scan QRIS untuk pembayaran / donasi</p>
+            
+            <!-- Tombol Lihat QRIS Penuh / Jelas -->
+            <a href="qris.png" target="_blank" rel="noopener noreferrer" class="view-qris-btn">
+              <svg class="view-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Lihat Gambar Jelas</span>
+            </a>
           </div>
         </div>
       </div>
