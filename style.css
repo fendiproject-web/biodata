@@ -171,7 +171,7 @@ body {
 }
 
 .accordion.active .accordion-content {
-  max-height: 400px;
+  max-height: 500px;
   opacity: 1;
   margin-top: 10px;
 }
@@ -196,7 +196,7 @@ body {
   transition: all 0.2s ease;
 }
 
-/* QRIS Card Inset */
+/* QRIS Card & Automatic Sizing */
 .qris-card {
   background: var(--bg-color);
   box-shadow: var(--shadow-inset);
@@ -205,13 +205,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  width: 100%;
+}
+
+.qris-picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .qris-img {
   width: 100%;
-  max-width: 200px;
+  max-width: 240px;
   height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 14px;
   box-shadow: var(--shadow-flat);
   object-fit: contain;
@@ -223,4 +231,37 @@ body {
   color: var(--text-secondary);
   text-align: center;
   font-weight: 500;
+}
+
+/* Button View QRIS Jelas */
+.view-qris-btn {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: var(--bg-color);
+  box-shadow: var(--shadow-flat);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.view-qris-btn:hover {
+  transform: translateY(-1px);
+}
+
+.view-qris-btn:active {
+  box-shadow: var(--shadow-inset);
+  transform: translateY(0);
+}
+
+.view-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary);
 }
