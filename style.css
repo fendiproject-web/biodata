@@ -30,7 +30,6 @@ html {
 
 body {
   background-color: var(--bg-color);
-  /* Pola Garis Diagonal Halus Murni CSS (Anti Polos) */
   background-image: 
     repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.35) 0px, rgba(255, 255, 255, 0.35) 2px, transparent 2px, transparent 14px),
     linear-gradient(135deg, #f4f8fc 0%, #dce4f0 100%);
@@ -40,12 +39,12 @@ body {
   justify-content: center;
   align-items: flex-start;
   min-height: 100dvh;
-  padding: 28px 16px;
+  padding: 24px 16px;
   overflow-y: auto;
   position: relative;
 }
 
-/* BENTUK GEOMETRIS 3D LATAR BELAKANG */
+/* Bentuk Geometris Latar Belakang */
 .bg-shape {
   position: fixed;
   border-radius: 40px;
@@ -95,21 +94,42 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 4px 0;
+  padding: 0 0 4px;
 }
 
+/* Banner Header Custom (1200 x 480) */
+.banner-wrapper {
+  width: 100%;
+  aspect-ratio: 1200 / 480;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow-flat);
+  margin-bottom: -50px; /* Menarik foto profil agar menumpuk rapi di atas banner */
+  background: var(--bg-color);
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Avatar Wrapper Overlap */
 .avatar-wrapper {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   padding: 4px;
-  background: rgba(235, 240, 247, 0.85);
+  background: rgba(235, 240, 247, 0.95);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow-avatar);
   margin-bottom: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 2; /* Memastikan foto profil ada di atas banner */
 }
 
 .avatar-img {
