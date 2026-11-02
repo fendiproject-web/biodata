@@ -8,8 +8,8 @@
   --shadow-avatar: 8px 8px 18px rgba(180, 190, 205, 0.7), -8px -8px 18px #ffffff;
   
   /* Brand Colors */
-  --telegram-color: #0088cc;
   --whatsapp-color: #25D366;
+  --wachannel-color: #075E54;
   --wagroup-color: #128C7E;
   --qris-color: #ED1C24;
 }
@@ -164,7 +164,7 @@ body {
   gap: 16px;
 }
 
-/* Neumorphic Button Base (Dilengkapi Garis Aksen & Efek Kaca) */
+/* Neumorphic Button Base */
 .neu-btn {
   width: 100%;
   padding: 14px 20px;
@@ -183,7 +183,7 @@ body {
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.9);
-  border-left: 5px solid transparent; /* Aksen Garis Kiri Tiap Tombol */
+  border-left: 5px solid transparent;
 }
 
 .neu-btn:hover {
@@ -254,13 +254,14 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Telegram */
-.btn-telegram {
-  border-left-color: var(--telegram-color);
+/* Saluran WhatsApp */
+.btn-wachannel {
+  border-left-color: var(--wachannel-color);
 }
-.btn-telegram .icon,
-.btn-telegram .btn-text {
-  color: var(--telegram-color);
+.btn-wachannel .icon,
+.btn-wachannel .sub-icon,
+.btn-wachannel .btn-text {
+  color: var(--wachannel-color);
 }
 
 /* WhatsApp Official */
