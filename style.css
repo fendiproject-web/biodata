@@ -104,7 +104,7 @@ body {
   border-radius: 22px;
   overflow: hidden;
   box-shadow: var(--shadow-flat);
-  margin-bottom: -50px; /* Menarik foto profil agar menumpuk rapi di atas banner */
+  margin-bottom: -50px;
   background: var(--bg-color);
 }
 
@@ -129,7 +129,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 2; /* Memastikan foto profil ada di atas banner */
+  z-index: 2;
 }
 
 .avatar-img {
@@ -205,6 +205,12 @@ body {
   height: 18px;
   color: var(--text-secondary);
   transition: transform 0.3s ease;
+}
+
+/* Style Teks Animasi Ketikan */
+.btn-text {
+  display: inline-block;
+  min-height: 1.2em;
 }
 
 /* Warna & Gradient Aplikasi */
