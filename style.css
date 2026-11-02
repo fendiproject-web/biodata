@@ -98,7 +98,7 @@ body {
   gap: 16px;
 }
 
-/* Neumorphic Button Base (Diperbesar) */
+/* Neumorphic Button Base */
 .neu-btn {
   width: 100%;
   padding: 16px 22px;
@@ -144,42 +144,31 @@ body {
 }
 
 /* Warna & Gradient Aplikasi */
-/* Instagram */
 .btn-instagram .btn-text {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* TikTok */
 .btn-tiktok .btn-text {
   background: linear-gradient(90deg, #25F4EE, #FE2C55);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Telegram */
-.btn-telegram .icon {
-  color: var(--telegram-color);
-}
+.btn-telegram .icon,
 .btn-telegram .btn-text {
   color: var(--telegram-color);
 }
 
-/* WhatsApp */
 .btn-whatsapp .icon,
-.btn-whatsapp .sub-icon {
-  color: var(--whatsapp-color);
-}
+.btn-whatsapp .sub-icon,
 .btn-whatsapp .btn-text {
   color: var(--whatsapp-color);
 }
 
-/* QRIS */
 .btn-qris .icon,
-.btn-qris .view-icon {
-  color: var(--qris-color);
-}
+.btn-qris .view-icon,
 .btn-qris .btn-text,
 .btn-qris span {
   color: var(--qris-color);
@@ -212,7 +201,7 @@ body {
   transform: rotate(180deg);
 }
 
-/* Sub Button Dropdown (Diperbesar) */
+/* Sub Button Dropdown */
 .sub-btn {
   padding: 14px 18px;
   border-radius: 18px;
@@ -254,7 +243,7 @@ body {
 
 .qris-img {
   width: 100%;
-  height: auto; /* Otomatis proporsional rasio foto asli */
+  height: auto;
   display: block;
   border-radius: 14px;
   box-shadow: var(--shadow-flat);
