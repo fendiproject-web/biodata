@@ -42,6 +42,7 @@ body {
   gap: 16px;
 }
 
+/* Profile Section */
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -85,12 +86,14 @@ body {
   font-weight: 500;
 }
 
+/* Links Container */
 .links-container {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
+/* Neumorphic Button */
 .neu-btn {
   width: 100%;
   padding: 14px 18px;
@@ -123,19 +126,29 @@ body {
   gap: 12px;
 }
 
+/* SVG Icon Custom Styles */
 .icon {
-  font-size: 1.2rem;
-  width: 20px;
-  text-align: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
   color: var(--text-primary);
 }
 
 .arrow-icon {
-  font-size: 0.8rem;
+  width: 16px;
+  height: 16px;
   color: var(--text-secondary);
   transition: transform 0.3s ease;
 }
 
+.sub-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--whatsapp-color);
+  flex-shrink: 0;
+}
+
+/* Accordion Dropdown */
 .accordion {
   width: 100%;
   display: flex;
@@ -162,6 +175,7 @@ body {
   transform: rotate(180deg);
 }
 
+/* Sub Button Dropdown */
 .sub-btn {
   padding: 12px 16px;
   border-radius: 16px;
@@ -177,11 +191,7 @@ body {
   transition: all 0.2s ease;
 }
 
-.sub-icon {
-  font-size: 1.05rem;
-  color: var(--whatsapp-color);
-}
-
+/* QRIS Card Inset */
 .qris-card {
   background: var(--bg-color);
   box-shadow: var(--shadow-inset);
