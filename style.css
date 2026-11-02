@@ -3,18 +3,25 @@
   --bg-color: #ebf0f7;
   --text-primary: #2d3748;
   --text-secondary: #718096;
-  --shadow-flat: 6px 6px 14px #c5cbd5, -6px -6px 14px #ffffff;
-  --shadow-inset: inset 4px 4px 8px #c5cbd5, inset -4px -4px 8px #ffffff;
-  --shadow-avatar: 8px 8px 18px #c5cbd5, -8px -8px 18px #ffffff;
+  --shadow-flat: 5px 5px 12px #c5cbd5, -5px -5px 12px #ffffff;
+  --shadow-inset: inset 3px 3px 6px #c5cbd5, inset -3px -3px 6px #ffffff;
+  --shadow-avatar: 7px 7px 15px #c5cbd5, -7px -7px 15px #ffffff;
   --whatsapp-color: #25d366;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none;
+  outline: none;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -22,36 +29,37 @@ body {
   color: var(--text-primary);
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Mengatur posisi layout rata atas */
-  min-height: 100vh;
-  padding: 40px 16px 32px; /* Margin atas ditinggikan agar pas dan rapi */
+  align-items: flex-start;
+  min-height: 100dvh;
+  padding: 24px 16px;
+  overflow-y: auto;
 }
 
 .container {
   width: 100%;
-  max-width: 390px;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
-/* Section Profil Minimalis */
+/* Profile Section */
 .profile-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 0 4px;
+  padding: 4px 0;
 }
 
 .avatar-wrapper {
-  width: 105px;
-  height: 105px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   padding: 4px;
   background: var(--bg-color);
   box-shadow: var(--shadow-avatar);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,37 +74,35 @@ body {
 }
 
 .profile-title {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.8px;
   color: var(--text-primary);
 }
 
 .profile-subtitle {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
-  margin-top: 3px;
+  margin-top: 2px;
   font-weight: 500;
 }
 
-/* Container Links */
+/* Links Container */
 .links-container {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 /* Neumorphic Button Base */
 .neu-btn {
   width: 100%;
-  padding: 16px 20px;
-  border-radius: 16px;
+  padding: 14px 18px;
+  border-radius: 20px;
   background: var(--bg-color);
   box-shadow: var(--shadow-flat);
-  border: none;
-  outline: none;
   color: var(--text-primary);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
   display: flex;
@@ -107,7 +113,7 @@ body {
 }
 
 .neu-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .neu-btn:active {
@@ -118,18 +124,18 @@ body {
 .btn-content {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .icon {
-  font-size: 1.25rem;
-  width: 22px;
+  font-size: 1.2rem;
+  width: 20px;
   text-align: center;
   color: var(--text-primary);
 }
 
 .arrow-icon {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
   transition: transform 0.3s ease;
 }
@@ -163,26 +169,22 @@ body {
 
 /* Sub Button Dropdown */
 .sub-btn {
-  padding: 14px 18px;
-  border-radius: 14px;
+  padding: 12px 16px;
+  border-radius: 16px;
   background: var(--bg-color);
-  box-shadow: var(--shadow-flat);
+  box-shadow: var(--shadow-inset);
   text-decoration: none;
   color: var(--text-primary);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   transition: all 0.2s ease;
 }
 
-.sub-btn:hover {
-  box-shadow: var(--shadow-inset);
-}
-
 .sub-icon {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--whatsapp-color);
 }
 
@@ -190,8 +192,8 @@ body {
 .qris-card {
   background: var(--bg-color);
   box-shadow: var(--shadow-inset);
-  border-radius: 16px;
-  padding: 18px;
+  border-radius: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -200,16 +202,16 @@ body {
 
 .qris-img {
   width: 100%;
-  max-width: 220px;
+  max-width: 200px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 14px;
   box-shadow: var(--shadow-flat);
   object-fit: contain;
   display: block;
 }
 
 .qris-caption {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
   text-align: center;
   font-weight: 500;
