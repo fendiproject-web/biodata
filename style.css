@@ -10,6 +10,7 @@
   /* Brand Colors */
   --telegram-color: #0088cc;
   --whatsapp-color: #25D366;
+  --wagroup-color: #128C7E;
   --qris-color: #ED1C24;
 }
 
@@ -97,7 +98,7 @@ body {
   padding: 0 0 4px;
 }
 
-/* Banner Header Custom (1200 x 480) */
+/* Banner Header Custom */
 .banner-wrapper {
   width: 100%;
   aspect-ratio: 1200 / 480;
@@ -106,6 +107,7 @@ body {
   box-shadow: var(--shadow-flat);
   margin-bottom: -50px;
   background: var(--bg-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .banner-img {
@@ -130,6 +132,7 @@ body {
   justify-content: center;
   position: relative;
   z-index: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .avatar-img {
@@ -161,12 +164,12 @@ body {
   gap: 16px;
 }
 
-/* Neumorphic Button Base */
+/* Neumorphic Button Base (Dilengkapi Garis Aksen & Efek Kaca) */
 .neu-btn {
   width: 100%;
-  padding: 16px 22px;
+  padding: 14px 20px;
   border-radius: 20px;
-  background: rgba(235, 240, 247, 0.88);
+  background: rgba(235, 240, 247, 0.9);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow-flat);
   font-size: 1.02rem;
@@ -176,7 +179,11 @@ body {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-left: 5px solid transparent; /* Aksen Garis Kiri Tiap Tombol */
 }
 
 .neu-btn:hover {
@@ -194,9 +201,22 @@ body {
   gap: 14px;
 }
 
+/* Socket Wadah Ikon Inset 3D */
+.icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--bg-color);
+  box-shadow: inset 2px 2px 5px rgba(180, 190, 205, 0.6), inset -2px -2px 5px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
 }
 
@@ -213,30 +233,60 @@ body {
   min-height: 1.2em;
 }
 
-/* Warna & Gradient Aplikasi */
+/* Aksen Warna Brand Khusus Tiap Tombol / Table */
+/* Instagram */
+.btn-instagram {
+  border-left-color: #e6683c;
+}
 .btn-instagram .btn-text {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* TikTok */
+.btn-tiktok {
+  border-left-color: #FE2C55;
+}
 .btn-tiktok .btn-text {
   background: linear-gradient(90deg, #25F4EE, #FE2C55);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Telegram */
+.btn-telegram {
+  border-left-color: var(--telegram-color);
+}
 .btn-telegram .icon,
 .btn-telegram .btn-text {
   color: var(--telegram-color);
 }
 
+/* WhatsApp Official */
+.btn-whatsapp {
+  border-left-color: var(--whatsapp-color);
+}
 .btn-whatsapp .icon,
 .btn-whatsapp .sub-icon,
 .btn-whatsapp .btn-text {
   color: var(--whatsapp-color);
 }
 
+/* WhatsApp Group */
+.btn-wagroup {
+  border-left-color: var(--wagroup-color);
+}
+.btn-wagroup .icon,
+.btn-wagroup .sub-icon,
+.btn-wagroup .btn-text {
+  color: var(--wagroup-color);
+}
+
+/* QRIS */
+.btn-qris {
+  border-left-color: var(--qris-color);
+}
 .btn-qris .icon,
 .btn-qris .view-icon,
 .btn-qris .btn-text,
@@ -273,9 +323,9 @@ body {
 
 /* Sub Button Dropdown */
 .sub-btn {
-  padding: 14px 18px;
+  padding: 12px 18px;
   border-radius: 18px;
-  background: rgba(235, 240, 247, 0.88);
+  background: rgba(235, 240, 247, 0.9);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow-inset);
   text-decoration: none;
@@ -285,11 +335,19 @@ body {
   align-items: center;
   gap: 12px;
   transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.sub-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-flat);
 }
 
 .sub-icon {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 
@@ -305,6 +363,7 @@ body {
   align-items: center;
   gap: 14px;
   width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .qris-img-wrapper {
@@ -344,6 +403,7 @@ body {
   gap: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
+  border-left: 4px solid var(--qris-color);
 }
 
 .view-qris-btn:hover {
