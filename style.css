@@ -1,4 +1,3 @@
-/* style.css */
 :root {
   --bg-color: #ebf0f7;
   --text-primary: #2d3748;
@@ -43,7 +42,6 @@ body {
   gap: 16px;
 }
 
-/* Profile Section */
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -87,14 +85,12 @@ body {
   font-weight: 500;
 }
 
-/* Links Container */
 .links-container {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* Neumorphic Button Base */
 .neu-btn {
   width: 100%;
   padding: 14px 18px;
@@ -140,7 +136,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Accordion Dropdown */
 .accordion {
   width: 100%;
   display: flex;
@@ -167,7 +162,6 @@ body {
   transform: rotate(180deg);
 }
 
-/* Sub Button Dropdown */
 .sub-btn {
   padding: 12px 16px;
   border-radius: 16px;
@@ -188,7 +182,6 @@ body {
   color: var(--whatsapp-color);
 }
 
-/* QRIS Card Inset */
 .qris-card {
   background: var(--bg-color);
   box-shadow: var(--shadow-inset);
