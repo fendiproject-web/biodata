@@ -1,0 +1,212 @@
+/* style.css */
+:root {
+  --bg-color: #e0e5ec;
+  --text-primary: #3d495c;
+  --text-secondary: #7a889b;
+  --shadow-flat: 8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff;
+  --shadow-inset: inset 6px 6px 10px #a3b1c6, inset -6px -6px 10px #ffffff;
+  --shadow-soft: 4px 4px 8px #a3b1c6, -4px -4px 8px #ffffff;
+  --accent-color: #2563eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Profile Card */
+.profile-card {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 24px;
+  background: var(--bg-color);
+  box-shadow: var(--shadow-flat);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  box-shadow: var(--shadow-flat);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.avatar-icon {
+  font-size: 38px;
+  color: var(--accent-color);
+}
+
+.profile-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.profile-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+/* Links Container */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Neumorphic Button Base */
+.neu-btn {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 18px;
+  background: var(--bg-color);
+  box-shadow: var(--shadow-flat);
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.neu-btn:hover {
+  transform: translateY(-2px);
+}
+
+.neu-btn:active {
+  box-shadow: var(--shadow-inset);
+  transform: translateY(0);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  width: 24px;
+  text-align: center;
+}
+
+.arrow-icon {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: transform 0.3s ease;
+}
+
+/* Accordion Component */
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin-top 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion.active .accordion-content {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.accordion.active .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+/* Sub-buttons inside WhatsApp Accordion */
+.sub-btn {
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: var(--bg-color);
+  box-shadow: var(--shadow-soft);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.sub-btn:hover {
+  box-shadow: var(--shadow-inset);
+}
+
+.sub-icon {
+  font-size: 1.1rem;
+  color: #25d366;
+}
+
+/* QRIS Section */
+.qris-box {
+  background: var(--bg-color);
+  box-shadow: var(--shadow-inset);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.qris-img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  object-fit: contain;
+}
+
+.qris-caption {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
